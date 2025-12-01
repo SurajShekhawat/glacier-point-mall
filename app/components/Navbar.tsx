@@ -30,31 +30,31 @@ export function Navbar() {
 
   return (
     <header
-      className={`fixed top-0 inset-x-0 z-50 transition-all duration-300 ${
+      className={`fixed inset-x-0 top-0 z-50 transition-all duration-300 ${
         isScrolled
           ? "bg-white/90 backdrop-blur-md shadow-sm"
           : "bg-gradient-to-b from-white/90 via-white/60 to-transparent backdrop-blur-md"
       }`}
     >
-      <nav className="mx-auto flex max-w-6xl items-center justify-between px-4 py-3 md:py-4">
-
-        {/* 🔥 Logo Image Here */}
+      <nav className="mx-auto flex max-w-6xl items-center justify-between px-4 py-2.5 md:py-3.5">
+        {/* Logo + text */}
         <Link href="#home" className="flex items-center gap-2">
           <motion.div
-            className="relative h-15 w-25 overflow-hidden"
-            whileHover={{ rotate: 3, scale: 1.05 }}
+            className="relative h-8 w-32 flex-shrink-0 overflow-hidden md:h-10 md:w-40"
+            whileHover={{ rotate: 2, scale: 1.03 }}
             transition={{ type: "spring", stiffness: 250, damping: 16 }}
           >
             <Image
-              src="/logo/glacier-point-mall.png"      // <--- Change to your logo path
+              src="/logo/glacier-point-mall.png"
               alt="Glacier Point Mall Logo"
               fill
-              className="object-cover"
+              className="object-contain"
               priority
             />
           </motion.div>
 
-          <div className="flex flex-col leading-tight">
+          {/* Text ko mobile pe hide rakha, sirf tablet/desktop pe dikhayenge */}
+          <div className="hidden flex-col leading-tight sm:flex">
             <span className="text-sm font-semibold tracking-tight md:text-base">
               Glacier Point Mall
             </span>
@@ -146,15 +146,6 @@ export function Navbar() {
                   {link.label}
                 </Link>
               ))}
-
-              {/* <motion.a
-                href="#visit"
-                onClick={() => setIsOpen(false)}
-                className="mt-2 block rounded-full border border-indigo-500/80 px-4 py-2 text-center text-xs font-semibold uppercase tracking-wide text-indigo-600"
-                whileTap={{ scale: 0.97 }}
-              >
-                Plan Your Visit
-              </motion.a> */}
             </div>
           </motion.div>
         )}
