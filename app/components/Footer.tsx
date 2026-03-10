@@ -122,9 +122,9 @@ export function Footer() {
 
             <div id="contact" className="mt-4 text-xs text-gray-600 md:text-sm">
               <p className="font-medium text-gray-800">Mall Address</p>
-              <p>Glacier Point Mall</p>
-              <p>Prime City District</p>
-              <p>India</p>
+              <p>1234 Glacier Avenue</p>
+              <p>Toronto, Ontario,</p>
+              <p>Canada – M5V 2T6</p>
             </div>
 
             {/* <div className="mt-4 text-xs text-gray-600 md:text-sm">
