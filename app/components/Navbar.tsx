@@ -84,6 +84,15 @@ export function Navbar() {
           >
             FAQ
           </motion.a>
+
+          <motion.a
+            href="https://app.artics-textile-group.ca/user/login"
+            className="rounded-full bg-indigo-600 px-4 py-1.5 text-xs font-semibold uppercase tracking-wide text-white shadow-sm hover:bg-indigo-700"
+            whileHover={{ y: -1, scale: 1.02 }}
+            whileTap={{ scale: 0.97 }}
+          >
+            Login
+          </motion.a>
         </div>
 
         {/* Mobile menu button */}
@@ -146,6 +155,13 @@ export function Navbar() {
                   {link.label}
                 </Link>
               ))}
+              <Link
+                href="https://app.artics-textile-group.ca/user/login"
+                onClick={() => setIsOpen(false)}
+                className="mt-2 block rounded-md bg-indigo-600 px-2 py-2 text-center text-sm font-semibold text-white hover:bg-indigo-700"
+              >
+                Login
+              </Link>
             </div>
           </motion.div>
         )}
