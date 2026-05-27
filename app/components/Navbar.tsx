@@ -86,7 +86,7 @@ export function Navbar() {
           </motion.a>
 
           <motion.a
-            href="https://app.artics-textile-group.ca/user/login"
+            href="https://app.glacier-point-mall/user/login"
             className="rounded-full bg-indigo-600 px-4 py-1.5 text-xs font-semibold uppercase tracking-wide text-white shadow-sm hover:bg-indigo-700"
             whileHover={{ y: -1, scale: 1.02 }}
             whileTap={{ scale: 0.97 }}
